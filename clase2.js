@@ -24,12 +24,11 @@ class Jugador {
    * @param {number} Numero
    * @param {String} Posicion
    */
-  constructor(Nombre, Estatura, Peso, Numero, Posicion) {
+  constructor(Nombre, Estatura, Peso, Numero) {
     this.Nombre = Nombre;
     this.Estatura = Estatura;
     this.Peso = Peso;
     this.Numero = Numero;
-    this.Posicion = Posicion;
   }
 
   pasar(jugador) {
@@ -47,11 +46,11 @@ class Jugador {
     console.log(`${this.Nombre} ${gol ? "Anoto" : "Fallo"}`);
   }
 }
-let jugadorMartin = new Jugador("Martin", 1.8, 75, 10, "Delantero");
+let jugadorMartin = new Jugador("Martin", 1.8, 75, 10);
 
-let jugadorJose = new Jugador("Jose", 1.6, 50, 13, "Defensa");
+let jugadorJose = new Jugador("Jose", 1.6, 50, 13);
 
-let jugadorRaul = new Jugador("Raul", 1.7, 62, 9, "Medio");
+let jugadorRaul = new Jugador("Raul", 1.7, 62, 9);
 
 console.log(jugadorMartin.Nombre);
 console.log(jugadorJose.Nombre);
@@ -61,8 +60,28 @@ jugadorMartin.pasar(jugadorJose);
 jugadorRaul.saltar("10");
 jugadorJose.tirar(true);
 
-// ? Abstración
+// ? Abstración y Herencia
 
-// ? Herencia
+class Delantero extends Jugador {
+  cantidadGoles = 0;
+  constructor(Nombre, Estatura, Peso, Numero, cantidadGoles) {
+    super(Nombre, Estatura, Peso, Numero);
+    this.cantidadGoles = cantidadGoles;
+  }
+}
 
-// ? Encapsulación
+class Medio extends Jugador {
+  posicion;
+  constructor(Nombre, Estatura, Peso, Numero, posicion) {
+    super(Nombre, Estatura, Peso, Numero);
+    this.posicion = posicion;
+  }
+}
+
+class Defensa extends Jugador {
+  defensaId;
+  constructor(Nombre, Estatura, Peso, Numero, defensaId) {
+    super(Nombre, Estatura, Peso, Numero);
+    this.defensaId = defensaId;
+  }
+}
