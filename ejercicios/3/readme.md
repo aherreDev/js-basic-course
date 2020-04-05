@@ -1,4 +1,4 @@
-# Practicando Poo
+# Practicando Poo v2
 
 ## Instrucciones
 
@@ -13,14 +13,6 @@ Los atributos y metodos siguen siendo los mismos, en este archivo solo se enlist
 
 ## Detalle de clases
 
-- ### Producto
-  - **Atributos**
-    - Nombre -- String
-    - Precio -- Number
-    - Peso -- Number
-  - **Metodos**
-    - GetResumen -- Devuelve una string con el siguiente formato: Nombre Peso Precio
-      Ejemplo: Chocolate carlos quinto 4g \$10
 - ### Pedido
   - **Atributos**
     - PedidoId -- Number
