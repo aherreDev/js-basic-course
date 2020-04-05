@@ -4,7 +4,125 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FlexBox</title>
-    <style></style>
+    <style>
+      body {
+        margin: 0px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        height: 100vh;
+      }
+      /* h1 {
+        padding: 0px;
+        margin: 0px;
+      }
+      .navbar h1 {
+        height: 10vh;
+        border: 1px dashed red;
+      }
+      .navbar span {
+        height: 10vh;
+        border: 1px dotted purple;
+      }
+      .navbar div {
+        display: flex;
+        order: 2;
+        height: 10vh;
+        border: dashed green;
+      }
+
+      .navbar {
+        display: flex;
+        background-color: aqua;
+        height: 30vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      } */
+      .navbar {
+        background-color: black;
+        color: white;
+        padding: 15px 10px;
+        display: flex;
+        align-items: center;
+      }
+      /*V1*/
+      .navbar.v1 {
+        padding-left: 30px;
+        justify-content: flex-end;
+      }
+      .navbar.v1 span {
+        margin-right: 7px;
+      }
+      .navbar.v1 span:hover {
+        cursor: pointer;
+        border-bottom: 1px solid rgb(165, 165, 165);
+      }
+      .navbar.v1 .logo {
+        padding: 10px 7px;
+        font-size: 10px;
+        background-color: gray;
+        border-radius: 50%;
+        margin-right: auto;
+        transition: 0.3s;
+      }
+      .navbar.v1 .logo:hover {
+        background-color: rgb(105, 105, 105);
+        border: 0px;
+      }
+      /*V2*/
+      .navbar.v2 {
+        padding: 15px 15px;
+        padding-left: 30px;
+        justify-content: space-between;
+      }
+      .navbar.v2 .logo {
+        padding: 10px 7px;
+        font-size: 10px;
+        background-color: gray;
+        border-radius: 50%;
+        margin-right: auto;
+        transition: 0.3s;
+      }
+      .navbar.v2 .logo:hover {
+        background-color: rgb(105, 105, 105);
+        border: 0px;
+      }
+      .navbar.v2 span:hover {
+        cursor: pointer;
+        border-bottom: 1px solid rgb(165, 165, 165);
+      }
+      .navbar.v2 div .right{
+        width: 40%;
+        display: flex;
+        justify-content: space-around;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <!--<div class="navbar">
+       <div class="uno">uno</div>
+      <span class="dos">dos</span>
+      <h1 class="tres">tres</h1>
+      <h1 class="cuatro">cuatro</h1> 
+      
+    </div>-->
+    <div class="navbar v1">
+      <span class="logo">Logo</span>
+      <span>About</span>
+      <span>Documentation</span>
+      <span>Pricing</span>
+    </div>
+    <div class="navbar v2">
+      <div>
+        <span class="logo">Logo</span>
+      </div>
+      <div class="right">
+        <span>About</span>
+        <span>Documentation</span>
+        <span>Pricing</span>
+      </div>
+    </span>
+  </body>
 </html>
